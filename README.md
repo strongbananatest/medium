@@ -1,20 +1,30 @@
 # Simple Todo App
 
-A basic todo application built with Flask.
+A basic todo application built as a static web page using HTML, CSS, and JavaScript. Todos are stored in the browser's local storage.
 
-## Setup
+## Features
 
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+- Add new todos
+- View and manage your todo list
+- Delete completed todos
+- Data persists in browser local storage
 
-2. Run the app:
-   ```bash
-   python app.py
-   ```
+## Usage
 
-3. Open your browser to `http://127.0.0.1:5000/`
+Simply open `index.html` in your web browser. No server required!
+
+## GitHub Pages
+
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+
+### Setup GitHub Pages
+
+1. Go to your repository settings
+2. Navigate to "Pages" in the sidebar
+3. Under "Source", select "GitHub Actions"
+4. The workflow will automatically deploy your site when you push to the main branch
+
+Your site will be available at `https://<username>.github.io/<repository-name>/`
 
 ## Features
 

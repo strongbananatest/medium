@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Todo App</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Enter a new todo" required>
+            <button type="submit">Add Todo</button>
+        </form>
+        <ul id="todo-list"></ul>
+    </div>
+    <script>
+        const form = document.getElementById('todo-form');
+        const input = document.getElementById('todo-input');
+        const list = document.getElementById('todo-list');
+
+        let todos = JSON.parse(localStorage.getItem('todos')) || [];
+
+        function renderTodos() {
+            list.innerHTML = '';
+            todos.forEach((todo, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `<span class="task-text">${todo}</span> <a class="delete-btn" href="#" onclick="deleteTodo(${index})">Delete</a>`;
+                list.appendChild(li);
+            });
+        }
+
+        function addTodo(task) {
+            todos.push(task);
+            localStorage.setItem('todos', JSON.stringify(todos));
+            renderTodos();
+        }
+
+        function deleteTodo(index) {
+            todos.splice(index, 1);
+            localStorage.setItem('todos', JSON.stringify(todos));
+            renderTodos();
+        }
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const task = input.value.trim();
+            if (task) {
+                addTodo(task);
+                input.value = '';
+            }
+        });
+
+        renderTodos();
+    </script>
+</body>
+</html>
