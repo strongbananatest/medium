@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -45,7 +45,7 @@ input[type="text"] {
 
 button {
     padding: 15px 25px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #f7dc6f 0%, #f39c12 100%);
     color: white;
     border: none;
     cursor: pointer;
@@ -55,7 +55,7 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+    background: linear-gradient(135deg, #f39c12 0%, #f7dc6f 100%);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
